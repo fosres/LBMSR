@@ -6,7 +6,6 @@ Welcome to The City of Lubbock Solid Waste Management site. At this new website 
 
 To submit a service request, follow the instructions below:
 
-<!DOCTYPE html>
 <html>
 <body>
 
