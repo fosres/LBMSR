@@ -9,7 +9,7 @@ To submit a service request, follow the instructions below:
 <html>
 <body>
 
-<h2>HTML Forms</h2>
+<h2>Enter Your First and Last Name</h2>
 
 <form action="/action_page.php">
   <label for="fname">First name:</label><br>
