@@ -26,9 +26,11 @@ To submit a service request, follow the instructions below:
 
 <html>
  <head>
-  <script type="text/javascript">
+  <script type="text/javascript" src="scriptName.js">
+<!--
 function functionOne() { alert('You clicked the top text'); }
 function functionTwo() { alert('You clicked the bottom text'); }
+-->
   </script>
  </head>
 <body>
