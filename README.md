@@ -73,19 +73,8 @@ To submit a service request, follow the instructions below:
 -->
 
 <html>
-<script src='scriptName.js'></script>
+<script src='./node_modules/sql.js'></script>
 <script>
-	
-	const initSqlJs = require('sql.js');
-	// or if you are in a browser:
-	// var initSqlJs = window.initSqlJs;
-
-	const SQL = await initSqlJs({
-	  // Required to load the wasm binary asynchronously. Of course, you can host it wherever you want
-	  // You can omit locateFile completely when running in node
-	  locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.1.0/dist/${file}`
-	});
-
     //Create the database
     var db = new SQL.Database();
     // Run a query without reading the results
