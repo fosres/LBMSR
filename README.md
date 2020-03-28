@@ -25,8 +25,10 @@ To submit a service request, follow the instructions below:
 </html>
 
 <html>
+<body>
 <script src="bundle.js">
 </script>
+</body>
 </html>
 
-Lundle
+Body
