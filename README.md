@@ -29,9 +29,6 @@ To submit a service request, follow the instructions below:
 <html>
   <script type="text/javascript" script src='sql-wasm.js'></script>
   <script>
-    config = {
-      locateFile: filename => `/dist/${filename}`
-    }
     // The `initSqlJs` function is globally provided by all of the main dist files if loaded in the browser.
     // We must specify this locateFile function if we are loading a wasm file from anywhere other than the current html page's folder.
     initSqlJs(config).then(function(SQL){
@@ -59,4 +56,4 @@ To submit a service request, follow the instructions below:
   </body>
 </html>
 
-Plausible
+Parcheesi
