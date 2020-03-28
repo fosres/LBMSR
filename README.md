@@ -26,16 +26,14 @@ To submit a service request, follow the instructions below:
 
 <html>
  <head>
-  <script type="text/javascript" src="scriptName.js">
-<!--
-function functionOne() { alert('You clicked the top text'); }
-function functionTwo() { alert('You clicked the bottom text'); }
--->
+  <script type="text/javascript" src="sql_test.js">
   </script>
  </head>
 <body>
- <p><a href="#" onClick="functionOne();">Top Text</a></p>
+ <p><a href="#" onClick="test();">Top Text</a></p>
+<!--
  <p><a href="javascript:functionTwo();">Bottom Text</a></p>
+-->
  </body>
 </html>
 
