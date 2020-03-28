@@ -36,7 +36,7 @@ To submit a service request, follow the instructions below:
  </body>
 </html>
 -->
-
+<!--
 <meta charset="utf8" />
 <html>
   <script src='sql-wasm.js'></script>
@@ -70,6 +70,7 @@ To submit a service request, follow the instructions below:
     Output is in Javascript console
   </body>
 </html>
+-->
 
 <html>
 <script src='js/sql.js'></script>
