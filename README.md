@@ -26,7 +26,7 @@ To submit a service request, follow the instructions below:
 
 <html>
 <body>
-<script src="broadcast.js">
+<script src="best.js">
 </script>
 </body>
 </html>
