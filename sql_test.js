@@ -1,4 +1,5 @@
 function test()												{
+
 const initSqlJs = require('sql.js');
 // or if you are in a browser:
 // var initSqlJs = window.initSqlJs;
