@@ -37,11 +37,9 @@ To submit a service request, follow the instructions below:
 </html>
 -->
 
-Testing
-
 <meta charset="utf8" />
 <html>
-  <script src='https://github.com/fosres/fosres.github.io/blob/master/node_modules/sql.js/dist/sql-wasm.js'></script>
+  <script src='sql-wasm.js'></script>
   <script>
     config = {
       locateFile: filename => `/dist/${filename}`
