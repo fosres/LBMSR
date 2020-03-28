@@ -73,7 +73,7 @@ To submit a service request, follow the instructions below:
 -->
 
 <html>
-<script src='./node_modules/sql.js'></script>
+<script src='/node_modules/sql.js'></script>
 <script>
     //Create the database
     var db = new SQL.Database();
