@@ -73,7 +73,7 @@ To submit a service request, follow the instructions below:
 -->
 
 <html>
-<script src='js/sql.js'></script>
+<script src='scriptName.js'></script>
 <script>
     //Create the database
     var db = new SQL.Database();
@@ -94,3 +94,5 @@ To submit a service request, follow the instructions below:
     }
 </script>
 </html>
+
+Plastoise
