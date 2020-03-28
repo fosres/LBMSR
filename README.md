@@ -73,7 +73,7 @@ To submit a service request, follow the instructions below:
 -->
 
 <html>
-<script type="text/javascript" src="./node_modules/dist/sql-wasm.js">
+<script type="text/javascript" src="scriptName.js">
 </script>
 <script>
     //Create the database
@@ -96,4 +96,4 @@ To submit a service request, follow the instructions below:
 </script>
 </html>
 
-src
+pls
