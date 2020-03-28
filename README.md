@@ -25,8 +25,8 @@ To submit a service request, follow the instructions below:
 </html>
 
 <html>
-<script src="bundle.js">
+<script src="test.js">
 </script>
 </html>
 
-Bundle
+Tundle
