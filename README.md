@@ -24,6 +24,7 @@ To submit a service request, follow the instructions below:
 </body>
 </html>
 
+<!--
 <html>
  <head>
   <script type="text/javascript" src="sql_test.js">
@@ -31,11 +32,10 @@ To submit a service request, follow the instructions below:
  </head>
 <body>
  <p><a href="#" onClick="test();">Top Text</a></p>
-<!--
  <p><a href="javascript:functionTwo();">Bottom Text</a></p>
--->
  </body>
 </html>
+-->
 
 Testing
 
