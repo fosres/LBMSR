@@ -31,7 +31,7 @@ To submit a service request, follow the instructions below:
   <script>
     // The `initSqlJs` function is globally provided by all of the main dist files if loaded in the browser.
     // We must specify this locateFile function if we are loading a wasm file from anywhere other than the current html page's folder.
-    initSqlJs(config).then(function(SQL){
+//    initSqlJs(config).then(function(SQL){
       //Create the database
       var db = new SQL.Database();
       // Run a query without reading the results
@@ -56,4 +56,4 @@ To submit a service request, follow the instructions below:
   </body>
 </html>
 
-Parcheesi
+Cheese
