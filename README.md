@@ -73,7 +73,7 @@ To submit a service request, follow the instructions below:
 -->
 
 <html>
-<script src='/node_modules/sql.js'></script>
+<script src='https://raw.githubusercontent.com/fosres/fosres.github.io/master/node_modules/sql.js/dist/sql-wasm.js'></script>
 <script>
     //Create the database
     var db = new SQL.Database();
@@ -95,4 +95,4 @@ To submit a service request, follow the instructions below:
 </script>
 </html>
 
-Bran
+Raw
