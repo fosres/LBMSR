@@ -26,9 +26,9 @@ To submit a service request, follow the instructions below:
 
 <html>
 <body>
-<script src="undertest.js">
+<script src="broadcast.js">
 </script>
 </body>
 </html>
 
-test
+broadcast
