@@ -24,22 +24,10 @@ To submit a service request, follow the instructions below:
 </body>
 </html>
 
-<!--
-<html>
- <head>
-  <script type="text/javascript" src="sql_test.js">
-  </script>
- </head>
-<body>
- <p><a href="#" onClick="test();">Top Text</a></p>
- <p><a href="javascript:functionTwo();">Bottom Text</a></p>
- </body>
-</html>
--->
-<!--
+
 <meta charset="utf8" />
 <html>
-  <script src='sql-wasm.js'></script>
+  <script type="text/javascript" script src='sql-wasm.js'></script>
   <script>
     config = {
       locateFile: filename => `/dist/${filename}`
@@ -70,34 +58,5 @@ To submit a service request, follow the instructions below:
     Output is in Javascript console
   </body>
 </html>
--->
 
-<html>
-<script type="text/javascript" src="scriptName.js">
-</script>
-<script type="text/javascript" src="sql-wasm.js">
-</script>
-<script type="text/javascript" src="node_modules/sql.js/dist/sql-wasm.js">
-</script>
-<script>
-    //Create the database
-    var db = new SQL.Database();
-    // Run a query without reading the results
-    db.run("CREATE TABLE test (col1, col2);");
-    // Insert two rows: (1,111) and (2,222)
-    db.run("INSERT INTO test VALUES (?,?), (?,?)", [1,111,2,222]);
-
-    // Prepare a statement
-    var stmt = db.prepare("SELECT * FROM test WHERE col1 BETWEEN $start AND $end");
-    stmt.getAsObject({$start:1, $end:1}); // {col1:1, col2:111}
-
-    // Bind new values
-    stmt.bind({$start:1, $end:2});
-    while(stmt.step()) { //
-        var row = stmt.getAsObject();
-        // [...] do something with the row of result
-    }
-</script>
-</html>
-
-orked
+Plausible
