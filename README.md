@@ -41,7 +41,7 @@ Testing
 
 <meta charset="utf8" />
 <html>
-  <script src='https://github.com/fosres/fosres.github.io.git/node_modules/sql.js/dist/sql-wasm.js'></script>
+  <script src='https://github.com/fosres/fosres.github.io/blob/master/node_modules/sql.js/dist/sql-wasm.js'></script>
   <script>
     config = {
       locateFile: filename => `/dist/${filename}`
