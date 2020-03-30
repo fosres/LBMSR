@@ -31,6 +31,13 @@ To submit a service request, follow the instructions below:
   <input type="submit" value="Submit">
 </form> 
 
+<h2>(Optional): Upload images of trash bin</h2>
+<form action="/action_page.php">
+	<input type="file" id="myFile" name="filename"
+	<input type="submit">
+</form> 
+
+
 <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
 
 </body>
