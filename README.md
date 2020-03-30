@@ -20,8 +20,8 @@ To submit a service request, follow the instructions below:
 
 <h2>Enter Your Six Digit Code</h2>
 <form>
-  <label for="lname">Six Digit Code:</label><br>
-  <input type="text" id="lname" name="lname" value="123456"><br><br>
+  <label for="six digit code">Six Digit Code:</label><br>
+  <input type="password" id="six digit code" name="six digit code" value="123456"><br><br>
 </form>
 
 <h2>Enter Your Service Request</h2>
@@ -85,4 +85,3 @@ To submit a service request, follow the instructions below:
    </body>
 </html>
 
-broadcast
