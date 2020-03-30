@@ -85,10 +85,10 @@ To submit a service request, follow the instructions below:
    </body>
 </html>
 
-<HTML>
-<HEAD>
-<TITLE>Test Input </TITLE>
-<SCRIPT LANGUAGE="JavaScript">
+<html>
+<head>
+<title>Test Input </TITLE>
+<script LANGUAGE="JavaScript">
 function readText (form) {
     TestVar =form.inputbox.value;
     alert ("You typed: " + TestVar);
@@ -96,14 +96,16 @@ function readText (form) {
 function writeText (form) {
     form.inputbox.value = "Have a nice day!"
 }
-</SCRIPT>
-</HEAD>
-<BODY>
-<FORM NAME="myform" ACTION="" METHOD="GET">
+</script>
+</head>
+<body>
+<form NAME="myform" ACTION="" METHOD="GET">
 Enter something in the box: <BR>
-<INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
-<INPUT TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
-<INPUT TYPE="button" NAME="button2" Value="Write" onClick="writeText(this.form)">
+<input TYPE="text" NAME="inputbox" VALUE=""><P>
+<input TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
+<input TYPE="button" NAME="button2" Value="Write" onClick="writeText(this.form)">
 </form>
 </body>
 </html>
+
+#URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
