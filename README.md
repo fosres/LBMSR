@@ -18,6 +18,8 @@ To submit a service request, follow the instructions below:
   <input type="text" id="lname" name="lname" value="Doe"><br><br>
   <label for="lname">Six Digit Code:</label><br>
   <input type="text" id="lname" name="lname" value="123456"><br><br>
+  <label for="lname">Type your issue with your trash bin below:</label><br>
+  <input type="text" id="lname" name="lname" value="QR Code ripped off."><br><br>
   <input type="submit" value="Submit">
 </form> 
 
