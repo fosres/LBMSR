@@ -85,11 +85,25 @@ To submit a service request, follow the instructions below:
    </body>
 </html>
 
-<form>
-<input id="quantity" class="qty" type="text" placeholder="quantity" />
-    <br>
-    <input type="button" value="Calculate" id="calc"/>
-</form>
-
-<!--display total cost here-->
-<span>The Cost is: <span id="total">totalcost</span></span>
+<HTML>
+<HEAD>
+<TITLE>Test Input </TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function readText (form) {
+    TestVar =form.inputbox.value;
+    alert ("You typed: " + TestVar);
+}
+function writeText (form) {
+    form.inputbox.value = "Have a nice day!"
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME="myform" ACTION="" METHOD="GET">
+Enter something in the box: <BR>
+<INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
+<INPUT TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
+<INPUT TYPE="button" NAME="button2" Value="Write" onClick="writeText(this.form)">
+</FORM>
+</BODY>
+</HTML>
