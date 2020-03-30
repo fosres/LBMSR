@@ -17,7 +17,7 @@ To submit a service request, follow the instructions below:
   <label for="lname">Last name:</label><br>
   <input type="text" id="lname" name="lname" value="Doe"><br><br>
   <label for="lname">Six Digit Code:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="text" id="lname" name="lname" value="123456"><br><br>
   <input type="submit" value="Submit">
 </form> 
 
