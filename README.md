@@ -85,3 +85,11 @@ To submit a service request, follow the instructions below:
    </body>
 </html>
 
+<form>
+<input id="quantity" class="qty" type="text" placeholder="quantity" />
+    <br>
+    <input type="button" value="Calculate" id="calc"/>
+</form>
+
+<!--display total cost here-->
+<span>The Cost is: <span id="total">totalcost</span></span>
