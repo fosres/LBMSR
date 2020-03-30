@@ -87,7 +87,7 @@ To submit a service request, follow the instructions below:
 
 <html>
 <head>
-<title>Test Input </TITLE>
+<title>Test Input </title>
 <script LANGUAGE="JavaScript">
 function readText (form) {
     TestVar =form.inputbox.value;
@@ -100,8 +100,8 @@ function writeText (form) {
 </head>
 <body>
 <form NAME="myform" ACTION="" METHOD="GET">
-Enter something in the box: <BR>
-<input TYPE="text" NAME="inputbox" VALUE=""><P>
+Enter something in the box: <br>
+<input TYPE="text" NAME="inputbox" VALUE=""><p>
 <input TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
 <input TYPE="button" NAME="button2" Value="Write" onClick="writeText(this.form)">
 </form>
