@@ -11,13 +11,21 @@ To submit a service request, follow the instructions below:
 
 <h2>Enter Your First and Last Name</h2>
 
-<form action="/action_page.php">
+<form>
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname" value="John"><br>
   <label for="lname">Last name:</label><br>
   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+</form>
+
+<h2>Enter Your Six Digit Code</h2>
+<form>
   <label for="lname">Six Digit Code:</label><br>
   <input type="text" id="lname" name="lname" value="123456"><br><br>
+</form>
+
+<h2>Enter Your Service Request</h2>
+<form>
   <label for="lname">Type your issue with your trash bin below:</label><br>
   <input type="text" id="lname" name="lname" value="QR Code ripped off."><br><br>
   <input type="submit" value="Submit">
