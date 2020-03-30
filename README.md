@@ -104,6 +104,6 @@ Enter something in the box: <BR>
 <INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
 <INPUT TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
 <INPUT TYPE="button" NAME="button2" Value="Write" onClick="writeText(this.form)">
-</FORM>
-</BODY>
-</HTML>
+</form>
+</body>
+</html>
