@@ -33,11 +33,23 @@ To submit a service request, follow the instructions below:
 
 <h2>(Optional): Upload Images of Trash Bin</h2>
 <form>
-<input type="file" id="file" name="files[]" multiple/>
+<input type="file" accept="image/*" id="file" name="image" onchange="loadFile(event)" style="display: none;">
 </form> 
 
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+<p><label for="file" style="curser: pointer;">Upload Image</label></p>
+<p><img id="output" width="200" /></p>
+
+<script>
+var loadFile = function(event)	{
+	
+	var image = document.getElementById('output');
+
+	image.src = URL.createObjectURL(event.target.files[0]);
+
+};
+
+</script>
 
 </body>
 </html>
