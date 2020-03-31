@@ -109,52 +109,7 @@ Enter something in the box: <br>
 </html>
 
 
-<html>
-<body>
-
-<script type='text/javascript'>
-
-function main()
-{
-    var inputFileToLoad = document.createElement("input");
-    inputFileToLoad.type = "file";
-    inputFileToLoad.id = "inputFileToLoad";
-    document.body.appendChild(inputFileToLoad);
-
-    var buttonLoadFile = document.createElement("button");
-    buttonLoadFile.onclick = loadImageFileAsURL;
-    buttonLoadFile.textContent = "Load Selected File";
-    document.body.appendChild(buttonLoadFile);
-}
-
-function loadImageFileAsURL()
-{
-    var filesSelected = document.getElementById("inputFileToLoad").files;
-    if (filesSelected.length > 0)
-    {
-        var fileToLoad = filesSelected[0];
-
-        if (fileToLoad.type.match("image.*"))
-        {
-            var fileReader = new FileReader();
-            fileReader.onload = function(fileLoadedEvent) 
-            {
-                var imageLoaded = document.createElement("img");
-                imageLoaded.src = fileLoadedEvent.target.result;
-                document.body.appendChild(imageLoaded);
-            };
-            fileReader.readAsDataURL(fileToLoad);
-        }
-    }
-}
-
-main();
-
-</script>
-
-</body>
-</html>
-
+<input type="file" id="file" name="files[]" multiple/>
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://stackoverflow.com/questions/21396279/display-image-and-validation-of-image-extension-before-uploading-file-using-java
 #URL:https://stackoverflow.com/questions/8810927/showing-an-image-from-an-array-of-images-javascript
