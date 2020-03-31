@@ -32,9 +32,10 @@ To submit a service request, follow the instructions below:
 </form> 
 
 <h2>(Optional): Upload Images of Trash Bin</h2>
-<form action="/action_page.php">
-	<input type="file" id="myFile" name="filename">
-	<input type="submit">
+<form>
+<input type="file" id="file" name="files[]" multiple/>
+<input type="file" id="myFile" name="filename">
+<input type="submit">
 </form> 
 
 
