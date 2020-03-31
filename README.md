@@ -110,3 +110,4 @@ Enter something in the box: <br>
 
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://stackoverflow.com/questions/21396279/display-image-and-validation-of-image-extension-before-uploading-file-using-java
+#URL:https://stackoverflow.com/questions/8810927/showing-an-image-from-an-array-of-images-javascript
