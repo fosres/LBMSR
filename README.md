@@ -115,3 +115,4 @@ Enter something in the box: <br>
 #URL:https://stackoverflow.com/questions/21396279/display-image-and-validation-of-image-extension-before-uploading-file-using-java
 #URL:https://stackoverflow.com/questions/8810927/showing-an-image-from-an-array-of-images-javascript
 #URL:https://stackoverflow.com/questions/21396279/display-image-and-validation-of-image-extension-before-uploading-file-using-java
+#URL:https://codewithlogic.wordpress.com/2013/09/01/creating-a-file-uploader-using-javascript-and-html-5/
