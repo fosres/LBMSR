@@ -127,9 +127,8 @@ function gen_sql_table()					{
          var msg;
 
          db.transaction(function (tx) {
-            tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
-            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")');
-            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id unique, code INTEGER, request TEXT)');
+            tx.executeSql('INSERT INTO LOGS (id, code, request) VALUES (12345, 654321, "QR Code ripped off")');
             msg = '<p>Log message created and row inserted.</p>';
             document.querySelector('#status').innerHTML =  msg;
          })
@@ -146,30 +145,6 @@ function gen_sql_table()					{
                }
             }, null);
          });
-	
-	db.transaction(function (tx) { 
-
-		    tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) { 
-
-		       var len = results.rows.length, i; 
-
-		       msg = "<p>Found rows: " + len + "</p>"; 
-
-		       document.querySelector('#status').innerHTML +=  msg; 
-
-	      
-
-		       for (i = 0; i < len; i++) { 
-
-			  msg = "<p><b>" + results.rows.item(i).log + "</b></p>"; 
-
-			  document.querySelector('#status').innerHTML +=  msg; 
-
-		       } 
-
-		    }, null); 
-
-		 }); 
 
       </script>
    </head>
