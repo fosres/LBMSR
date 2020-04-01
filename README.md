@@ -245,11 +245,11 @@ function read_service_request(service_request)	{
 <input type="button" name="button" value="Click" onClick="read_bin_number(this.form)">
 </form>
 <form name="CodeForm" action="" method="post">Enter six digit code:<br>
-<input type="password" name="code" value="Read">
+<input type="password" name="code" value="">
 <input type="button" name="button" value="Click" onClick="read_six_digit_code(this.form)">
 </form>
 <form name="ServeForm" action="" method="post">Enter service request:<br>
-<input type="text" name="complaint" value="Read">
+<input type="text" name="complaint" value="">
 <input type="button" name="button" value="Click" onClick="read_service_request(this.form)">
 </form>
 </body>
