@@ -209,6 +209,28 @@ Enter Service Request: <input type="text" name="service_request"><br>
 </body>
 </html>
 
+<html>
+<head>
+<title>Service Request Form</title>
+<script>
+function read_bin_number(binum)			{
+	
+	var binumber = binum.bin.value
+
+	alert("You typed:" + binumber);
+
+}
+
+</script>
+</head>
+<body>
+<form name="WasteForm" action="" method="post">Enter bin number:<br>
+<input type="text" name="bin" value="">
+<input type="button" name="button" value="Click" onClick="read_bin_number(this.form)">
+</form>
+</body>
+</html>
+
 <!--
 <html>
 <p><input type="file" accept="image/*" name="image1" id="file" onchange="loadFile1(event)" style="display: none;"></p>
