@@ -143,13 +143,13 @@ function gen_sql_table()					{
                document.querySelector('#status').innerHTML +=  msg;
 
                for (i = 0; i < len; i++) {
-                  msg = "<p><b>" + results.rows.item(i).id + "</b></p>";
+                  msg = "<p><b>" + "Bin Number:" + results.rows.item(i).id + "</b></p>";
                   document.querySelector('#status').innerHTML +=  msg;
                   
-		  msg = "<p><b>" + results.rows.item(i).code+ "</b></p>";
+		  msg = "<p><b>" + "Six Digit Code" + results.rows.item(i).code+ "</b></p>";
                   document.querySelector('#status').innerHTML +=  msg;
 		  
-		  msg = "<p><b>" + results.rows.item(i).request+ "</b></p>";
+		  msg = "<p><b>" + "Service Request" + results.rows.item(i).request+ "</b></p>";
                   document.querySelector('#status').innerHTML +=  msg;
                }
             }, null);
