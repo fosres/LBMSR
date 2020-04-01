@@ -3,7 +3,37 @@
 ## Solid Waste Management
 
 Welcome to The City of Lubbock Solid Waste Management site. At this new website you may submit reports and/or requests about how your trash is managed. You may also use this site to view if your trash has been picked for this week.
-
+<html>
+<script>
+var peopleData = [
+    { name: "John Dow", email: "john@company.com" },
+    { name: "Don Dow", email: "don@company.com" }
+];
+ 
+function initDb() {
+    var request = indexedDB.open("PeopleDB", 1);  
+    request.onsuccess = function (evt) {
+        db = request.result;                                                            
+    };
+ 
+    request.onerror = function (evt) {
+        console.log("IndexedDB error: " + evt.target.errorCode);
+    };
+ 
+    request.onupgradeneeded = function (evt) {                   
+        var objectStore = evt.currentTarget.result.createObjectStore("people", 
+                                     { keyPath: "id", autoIncrement: true });
+ 
+        objectStore.createIndex("name", "name", { unique: false });
+        objectStore.createIndex("email", "email", { unique: true });
+ 
+        for (i in peopleData) {
+            objectStore.add(peopleData[i]);
+        }
+    };
+}
+</script>
+</html>
 To submit a service request, follow the instructions below:
 
 <h2>(Optional): Upload Image of Trash Bin</h2>
