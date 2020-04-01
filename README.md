@@ -246,6 +246,8 @@ function indexed_db_add() {
    request.onerror = function(event) {
       alert("Unable to add data\r\nPrasad is already exist in your database! ");
    }
+
+	alert("Swiss");
 }
 </script>
 </head>
