@@ -35,6 +35,9 @@ To submit a service request, follow the instructions below:
 <form>
 <input type="file" accept="image/*" id="file" name="image" onchange="loadFile(event)" style="display: none;">
 </form> 
+<form>
+<input type="file" accept="image/*" id="file" name="image" onchange="loadFile(event)" style="display: none;">
+</form> 
 
 
 <p><label for="file" style="curser: pointer;">Upload Image</label></p>
