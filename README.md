@@ -252,7 +252,7 @@ function read_service_request(service_request)	{
 <input type="text" name="complaint" value="">
 <input type="button" name="button" value="Click" onClick="read_service_request(this.form)">
 </form>
-<form name="sqlform" onSubmit="return proc_sql(this.form)">
+<form name="sqlform" onSubmit="return proc_sql(this.form)">Enter bin number, six digit code, and service request in that order in each consecutive form field below:<br>
 <input type="text" name="bin" value=""><br>
 <input type="password" name="code" value=""><br>
 <input type="text" name="service_request" value=""><br>
