@@ -131,6 +131,9 @@ function gen_sql_table()					{
             tx.executeSql('INSERT INTO WASTEFORM (id, code, request) VALUES (12345, 654321, "QR Code ripped off")');
             msg = '<p>Log message created and row inserted.</p>';
             document.querySelector('#status').innerHTML =  msg;
+            
+	    msg = '<p>Printing single row SQL Table Contents below.</p>';
+            document.querySelector('#status').innerHTML =  msg;
          })
 
          db.transaction(function (tx) {
