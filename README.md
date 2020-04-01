@@ -243,9 +243,24 @@ function proc_sql(form)				{
 	db.transaction(function (tx) {
 	  tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id unique, code INTEGER, request TEXT) (?,?,?)');
 	  tx.executeSql('INSERT INTO wasteform (id, code,request) VALUES (?,?,?)',[document.sqlform.bin.value,document.sqlform.code.value,document.sqlform.service_request.value]);
+	}
+
+	tx.executeSql('SELECT * FROM wasteform', [], function(tx,results)	{
+		
+		var len = results.rows.length, i;
+
+		for (i=0;i<len;i++)	{
+			
+			alert(results.rows.item(i).text);
+
+		}
+
 	});
 
+	);
+
 }
+
 </script>
 </head>
 <body>
@@ -268,7 +283,7 @@ function proc_sql(form)				{
 <input type="submit"><br>
 </body>
 </html>
-Plaster
+Feed
 
 
 <!--
