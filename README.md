@@ -36,21 +36,17 @@ To submit a service request, follow the instructions below:
 <input type="file" accept="image/*" id="file" name="image" onchange="loadFile(event)" style="display: none;">
 </form> 
 <p><label for="file" style="curser: pointer;">Upload Image</label></p>
-<p><img id="output1" width="200" /></p>
+<p><img id="output" width="200" /></p>
 
 <p><label for="file" style="curser: pointer;">Upload Image</label></p>
-<p><img id="output2" width="200" /></p>
+<p><img id="output" width="200" /></p>
 
 <script>
 var loadFile = function(event)	{
 	
-	var image = document.getElementById('output1');
+	var image = document.getElementById('output');
 
 	image.src = URL.createObjectURL(event.target.files[0]);
-
-	var image2 = document.getElementById('output2');
-
-	image.src = URL.createObjectURL(event.target.files[1]);
 
 };
 
