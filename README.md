@@ -119,7 +119,6 @@ function gen_sql_table()					{
 </html>
 -->
 
-<!--
 <html>
    <head>
 
@@ -180,7 +179,6 @@ function gen_sql_table()					{
    </body>
 </html>
 
--->
 <!--
 <html>
 <body>
