@@ -236,6 +236,18 @@ function read_service_request(service_request)	{
 
 function indexed_db_add() {
 	
+	var request = db.transaction(["employee"], "readwrite")
+	   .objectStore("employee")
+	   .add({ id: "01", name: "prasad", age: 24, email: "prasad@tutorialspoint.com" });
+	   
+	   request.onsuccess = function(event) {
+	      alert("Prasad has been added to your database.");
+	   };
+	   
+	   request.onerror = function(event) {
+	      alert("Unable to add data\r\nPrasad is already exist in your database! ");
+	   }	
+	
 	alert("Swiss");
 }
 </script>
@@ -375,14 +387,6 @@ Read
    </head>
 </html>
 
-<html>
-<script>
-if (!('indexedDB' in window)) {
-  console.log('This browser doesn\'t support IndexedDB');
-  return;
-}
-</script>
-</html>
 
 Added extra alert
 <!--
