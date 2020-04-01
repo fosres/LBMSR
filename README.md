@@ -199,6 +199,17 @@ Enter Service Request: <input type="text" name="service_request"><br>
 <head>
 <title>Service Request Form</title>
 <script>
+window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || 
+window.msIndexedDB;
+ 
+window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || 
+window.msIDBTransaction;
+window.IDBKeyRange = window.IDBKeyRange || 
+window.webkitIDBKeyRange || window.msIDBKeyRange
+ 
+if (!window.indexedDB) {
+   window.alert("Your browser doesn't support a stable version of IndexedDB.")
+}
 function read_bin_number(binum)			{
 	
 	var binumber = binum.bin.value
@@ -223,22 +234,19 @@ function read_service_request(service_request)	{
 
 }
 
-function add()	{
-	
-	var request = db.transaction(["employee"], "readwrite").add({id "00-03", name: "Kenny", age: 19,email: "kenny@planet.org"});
-
-	request.onsuccess = function(event)	{
-
-		alert("Kenny has been added to your database.");
-	}
-
-	request.onerror = function(event)	{
-
-		alert("Unable to add Kenny to your database.");
-	}
-
+function add() {
+   var request = db.transaction(["employee"], "readwrite")
+   .objectStore("employee")
+   .add({ id: "01", name: "prasad", age: 24, email: "prasad@tutorialspoint.com" });
+   
+   request.onsuccess = function(event) {
+      alert("Prasad has been added to your database.");
+   };
+   
+   request.onerror = function(event) {
+      alert("Unable to add data\r\nPrasad is already exist in your database! ");
+   }
 }
-
 </script>
 </head>
 <body>
