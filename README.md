@@ -127,14 +127,14 @@ function gen_sql_table()					{
          var msg;
 
          db.transaction(function (tx) {
-            tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id, code, request)');
-            tx.executeSql('INSERT INTO wasteform (id, code, request) VALUES (12345, 654321, "QR Code ripped off")');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS WASTEFORM(id, code, request)');
+            tx.executeSql('INSERT INTO WASTEFORM (id, code, request) VALUES (12345, 654321, "QR Code ripped off")');
             msg = '<p>Log message created and row inserted.</p>';
             document.querySelector('#status').innerHTML =  msg;
          })
 
          db.transaction(function (tx) {
-            tx.executeSql('SELECT * FROM wasteform', [], function (tx, results) {
+            tx.executeSql('SELECT * FROM WASTEFORM', [], function (tx, results) {
                var len = results.rows.length, i;
                msg = "<p>Found rows: " + len + "</p>";
                document.querySelector('#status').innerHTML +=  msg;
@@ -360,7 +360,8 @@ Read
       
    </head>
 </html>
-Trying to print literal SQL Database
+
+Printing Entire Row
 <!--
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://stackoverflow.com/questions/21396279/display-image-and-validation-of-image-extension-before-uploading-file-using-java
