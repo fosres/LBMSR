@@ -31,14 +31,10 @@ To submit a service request, follow the instructions below:
   <input type="submit" value="Submit">
 </form> 
 
-<h2>(Optional): Upload Images of Trash Bin</h2>
+<h2>(Optional): Upload Image of Trash Bin</h2>
 <form>
-<input type="file" accept="image/*" id="file" name="image" onchange="loadFile(event)" style="display: none;">
-<input type="file" accept="image/*" id="file" name="image" onchange="loadFile(event)" style="display: none;">
+<input type="file" accept="image/*" id="file" name="image1" onchange="loadFile(event)" style="display: none;">
 </form> 
-<p><label for="file" style="curser: pointer;">Upload Image</label></p>
-<p><img id="output" width="200" /></p>
-
 <p><label for="file" style="curser: pointer;">Upload Image</label></p>
 <p><img id="output" width="200" /></p>
 
@@ -121,6 +117,7 @@ Enter something in the box: <br>
 </body>
 </html>
 
+<!--
 <html>
 <p><input type="file" accept="image/*" name="image1" id="file" onchange="loadFile1(event)" style="display: none;"></p>
 <p><input type="file" accept="image/*" name="image2" id="file" onchange="loadFile2(event)" style="display: none;"></p>
@@ -145,6 +142,8 @@ var loadFile2 = function(event)	{
 };
 </script>
 </html>
+-->
+
 
 <!--
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
