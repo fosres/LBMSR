@@ -127,7 +127,7 @@ function gen_sql_table()					{
          var msg;
 
          db.transaction(function (tx) {
-            tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id unique, code INTEGER, request TEXT)');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id unique, code, request)');
             tx.executeSql('INSERT INTO wasteform (id, code, request) VALUES (12345, 654321, "QR Code ripped off")');
             msg = '<p>Log message created and row inserted.</p>';
             document.querySelector('#status').innerHTML =  msg;
