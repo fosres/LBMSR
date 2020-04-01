@@ -142,6 +142,12 @@ function gen_sql_table()					{
                for (i = 0; i < len; i++) {
                   msg = "<p><b>" + results.rows.item(i).id + "</b></p>";
                   document.querySelector('#status').innerHTML +=  msg;
+                  
+		  msg = "<p><b>" + results.rows.item(i).code+ "</b></p>";
+                  document.querySelector('#status').innerHTML +=  msg;
+		  
+		  msg = "<p><b>" + results.rows.item(i).request+ "</b></p>";
+                  document.querySelector('#status').innerHTML +=  msg;
                }
             }, null);
          });
@@ -361,7 +367,11 @@ Read
    </head>
 </html>
 
-Printing Id Field
+Printing Bin Number
+
+Printing Six Digit Code
+
+Printing Service Request
 <!--
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://stackoverflow.com/questions/21396279/display-image-and-validation-of-image-extension-before-uploading-file-using-java
