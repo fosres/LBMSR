@@ -236,6 +236,8 @@ function read_service_request(service_request)	{
 
 function indexed_db_add() {
 	
+	alert("Swiss");
+
 	var request = db.transaction(["employee"], "readwrite")
 	   .objectStore("employee")
 	   .add({ id: "01", name: "prasad", age: 24, email: "prasad@tutorialspoint.com" });
@@ -248,7 +250,6 @@ function indexed_db_add() {
 	      alert("Unable to add data\r\nPrasad is already exist in your database! ");
 	   }	
 	
-	alert("Swiss");
 }
 </script>
 </head>
