@@ -197,6 +197,18 @@ Enter something in the box: <br>
 </body>
 </html>
 
+<html>
+<body>
+<form action="welcome.php" method="post">
+Enter Bin Number: <input type="text" name="bin_num"><br>
+Enter Six Digits: <input type="text" name="six_digits"><br>
+Enter Service Request: <input type="text" name="service_request"><br>
+<input type="submit">
+</form>
+
+</body>
+</html>
+
 <!--
 <html>
 <p><input type="file" accept="image/*" name="image1" id="file" onchange="loadFile1(event)" style="display: none;"></p>
