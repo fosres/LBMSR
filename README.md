@@ -237,29 +237,17 @@ function read_service_request(service_request)	{
 
 }
 
-function proc_sql(form)				{
-         var db = openDatabase('mydb', '1.0', 'Test DB', 30000);
-         var msg;
+function add()	{
+	
+	var request = db.transaction(["employee"], "readwrite").add({id "00-03", name: "Kenny", age: 19,email: "kenny@planet.org"});
 
-         db.transaction(function (tx) {
-            tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id text, code INTEGER, request TEXT)');
-            tx.executeSql('INSERT INTO wasteform (id, code, request) VALUES (?,?,?)',[document.sqlform.bin.value,document.sqlform.code.value,document.sqlform.service_request.value]);
-            msg = '<p>Log message created and row inserted.</p>';
-            document.querySelector('#status').innerHTML =  msg;
-         })
+	request.onsuccess = function(event)	{
 
-         db.transaction(function (tx) {
-            tx.executeSql('SELECT * FROM wasteform', [], function (tx, results) {
-               var len = results.rows.length, i;
-               msg = "<p>Found rows: " + len + "</p>";
-               document.querySelector('#status').innerHTML +=  msg;
+		alert("Kenny has been added to your database.");
+	}
 
-               for (i = 0; i < len; i++) {
-                  msg = "<p><b>" + results.rows.item(i).log + "</b></p>";
-                  document.querySelector('#status').innerHTML +=  msg;
-               }
-            }, null);
-         });
+}
+
 </script>
 </head>
 <body>
@@ -279,11 +267,11 @@ function proc_sql(form)				{
 Enter bin number:<input type="text" name="bin" value=""><br>
 Enter six digit code:<input type="password" name="code" value=""><br>
 Enter Service Request:<input type="text" name="service_request" value=""><br>
-<input type="button" name="button" value="Submit" onClick="proc_sql(this.form)"><br>
+<input type="button" name="button" value="Submit" onClick="add()"><br>
 </body>
 </html>
 
-Fourth Attempt
+add
 
 
 <!--
