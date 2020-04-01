@@ -256,6 +256,7 @@ function add()	{
 </script>
 </head>
 <body>
+<button onclick="read()">Read </button>
 <form name="BinForm" action="" method="post">Enter bin number:<br>
 <input type="text" name="bin" value="">
 <input type="button" name="button" value="Click" onClick="read_bin_number(this.form)">
@@ -276,7 +277,7 @@ Enter Service Request:<input type="text" name="service_request" value=""><br>
 </body>
 </html>
 
-IndexedDB:ErrorHandling
+Read
 
 
 <!--
