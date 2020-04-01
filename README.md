@@ -53,10 +53,41 @@ var loadFile = function(event)	{
 </html>
 
 <html>
-<body>
-<script src="best.js">
+<head>
+<script>
+function gen_sql_table()					{
+	
+	var bin_num = document.forms["WasteForm"]["Bin Number"];
+
+	var six_digits = document.forms["WasteForm"]["Six Digit Code"];
+
+	var service_request = document.form["WasteForm"]["Service Request"];
+
+	var db = openDatabase('bindb','1.0','Test DB',30000);
+
+	db.transaction(function(tx)		{
+		
+		tx.executeSQL('CREATE TABLE IF NOT EXISTS WEBDB (id INTEGER, code INTEGER, request TEXT');
+
+		tx.executeSQL('INSERT INTO WEBDB (id,code,request) (?,?,?)',[bin_num,six_digits,service_request]);
+	
+	});
+
+
+}
 </script>
+<body>
+<form name="WasteForm" onsubmit="return gen_sql_table()" method="post">
+<p>Enter Bin Number: <input type="text" name="Bin Number"></p><br>
+<p>Enter Six Digit Code:<input type="password" name="Six Digit Code"></p><br>
+<p>Enter Your Service Request:<input type="text" name="Service Request"></p><br>
+<p><input type="submit" value="send" name="Submit"></p>
+</form>
 </body>
+</html>
+</form>
+</body>
+
 </html>
 
 <html>
