@@ -52,6 +52,7 @@ var loadFile = function(event)	{
 </body>
 </html>
 
+<!--
 <html>
 <head>
 <script>
@@ -111,8 +112,7 @@ function gen_sql_table()					{
 </form>
 </body>
 </html>
-
-</html>
+-->
 
 <html>
    <head>
