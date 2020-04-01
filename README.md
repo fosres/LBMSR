@@ -238,29 +238,28 @@ function read_service_request(service_request)	{
 }
 
 function proc_sql(form)				{
-	
-	var db = openDatabase('mydb', '1.0', 'my first database', 30000);
-	db.transaction(function (tx) {
-	  tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id unique, code INTEGER, request TEXT)');
-	  tx.executeSql('INSERT INTO wasteform (id, code,request) VALUES (?,?,?)',[document.sqlform.bin.value,document.sqlform.code.value,document.sqlform.service_request.value]);
-	}
+         var db = openDatabase('mydb', '1.0', 'Test DB', 30000);
+         var msg;
 
-	tx.executeSql('SELECT * FROM wasteform', [], function(tx,results)	{
-		
-		var len = results.rows.length, i;
+         db.transaction(function (tx) {
+            tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id text, code INTEGER, request TEXT)');
+            tx.executeSql('INSERT INTO wasteform (id, code, request) VALUES (?,?,?)',[document.sqlform.bin.value,document.sqlform.code.value,document.sqlform.service_request.value]);
+            msg = '<p>Log message created and row inserted.</p>';
+            document.querySelector('#status').innerHTML =  msg;
+         })
 
-		for (i=0;i<len;i++)	{
-			
-			alert(results.rows.item(i).text);
+         db.transaction(function (tx) {
+            tx.executeSql('SELECT * FROM wasteform', [], function (tx, results) {
+               var len = results.rows.length, i;
+               msg = "<p>Found rows: " + len + "</p>";
+               document.querySelector('#status').innerHTML +=  msg;
 
-		}
-
-	});
-
-	);
-
-}
-
+               for (i = 0; i < len; i++) {
+                  msg = "<p><b>" + results.rows.item(i).log + "</b></p>";
+                  document.querySelector('#status').innerHTML +=  msg;
+               }
+            }, null);
+         });
 </script>
 </head>
 <body>
@@ -284,7 +283,7 @@ Enter Service Request:<input type="text" name="service_request" value=""><br>
 </body>
 </html>
 
-Third Attempt
+Fourth Attempt
 
 
 <!--
