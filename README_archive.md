@@ -6,6 +6,31 @@ Welcome to The City of Lubbock Solid Waste Management site. At this new website 
 
 To submit a service request, follow the instructions below:
 
+<html>
+<body>
+
+<h2>Enter Your First and Last Name</h2>
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+</form>
+
+<h2>Enter Your Six Digit Code</h2>
+<form>
+  <label for="six digit code">Six Digit Code:</label><br>
+  <input type="password" id="six digit code" name="six digit code" value="123456"><br><br>
+</form>
+
+<h2>Enter Your Service Request</h2>
+<form>
+  <label for="lname">Type your issue with your trash bin below:</label><br>
+  <input type="text" id="lname" name="lname" value="QR Code ripped off."><br><br>
+  <input type="submit" value="Submit" onClick="return gen_sql_table()">
+</form> 
+
 <h2>(Optional): Upload Image of Trash Bin</h2>
 <form>
 <input type="file" accept="image/*" id="file" name="image1" onchange="loadFile(event)" style="display: none;">
@@ -89,7 +114,6 @@ function gen_sql_table()					{
 </html>
 -->
 
-<!--
 <html>
    <head>
 
@@ -150,8 +174,29 @@ function gen_sql_table()					{
    </body>
 </html>
 
--->
-<!--
+<html>
+<head>
+<title>Test Input </title>
+<script LANGUAGE="JavaScript">
+function readText (form) {
+    TestVar =form.inputbox.value;
+    alert ("You typed: " + TestVar);
+}
+function writeText (form) {
+    form.inputbox.value = "Have a nice day!"
+}
+</script>
+</head>
+<body>
+<form NAME="myform" ACTION="" METHOD="GET">
+Enter something in the box: <br>
+<input TYPE="text" NAME="inputbox" VALUE=""><p>
+<input TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
+<input TYPE="button" NAME="button2" Value="Write" onClick="writeText(this.form)">
+</form>
+</body>
+</html>
+
 <html>
 <body>
 <form action="welcome.php" method="post">
@@ -163,7 +208,6 @@ Enter Service Request: <input type="text" name="service_request"><br>
 
 </body>
 </html>
--->
 
 <html>
 <head>
