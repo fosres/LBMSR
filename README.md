@@ -234,7 +234,7 @@ function read_service_request(service_request)	{
 
 }
 
-function add() {
+function indexed_db_add() {
    var request = db.transaction(["employee"], "readwrite")
    .objectStore("employee")
    .add({ id: "01", name: "prasad", age: 24, email: "prasad@tutorialspoint.com" });
@@ -262,6 +262,9 @@ function add() {
 <form name="ServeForm" action="" method="post">Enter service request:<br>
 <input type="text" name="complaint" value="">
 <input type="button" name="button" value="Click" onClick="read_service_request(this.form)">
+</form>
+<form name="indexedb" action="" method="post">Testing IndexedDb:<br>
+<input type="button" name="button" value="IndexedDB" onClick="indexed_db_add()">
 </form>
 <form name="sqlform"><br>
 Enter bin number:<input type="text" name="bin" value=""><br>
