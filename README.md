@@ -221,42 +221,28 @@ function read_bin_number(binum)			{
 
 }
 
+function read_six_digit_code(six_digit_code)	{
+	
+	var code = six_digit_code.code.value
+
+	alert("You typed:" + code);
+
+}
+
 </script>
 </head>
 <body>
-<form name="WasteForm" action="" method="post">Enter bin number:<br>
+<form name="BinForm" action="" method="post">Enter bin number:<br>
 <input type="text" name="bin" value="">
+<input type="button" name="button" value="Click" onClick="read_bin_number(this.form)">
+</form>
+<form name="CodeForm" action="" method="post">Enter six digit code:<br>
+<input type="password" name="code" value="">
 <input type="button" name="button" value="Click" onClick="read_bin_number(this.form)">
 </form>
 </body>
 </html>
 
-<!--
-<html>
-<p><input type="file" accept="image/*" name="image1" id="file" onchange="loadFile1(event)" style="display: none;"></p>
-<p><input type="file" accept="image/*" name="image2" id="file" onchange="loadFile2(event)" style="display: none;"></p>
-<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
-<p><img id="output" width="200" /></p>
-
-<script>
-var loadFile1 = function(event)	{
-	
-	var image = document.getElementById('output');
-
-	image.src = URL.createObjectURL(event.target.files[0]);	
-
-};
-
-var loadFile2 = function(event)	{
-	
-	var image = document.getElementById('output');
-
-	image.src = URL.createObjectURL(event.target.files[1]);	
-
-};
-</script>
-</html>
--->
 
 
 <!--
