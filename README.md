@@ -107,7 +107,7 @@ function gen_sql_table()					{
 <p>Enter Bin Number: <input type="text" name="Bin Number"></p><br>
 <p>Enter Six Digit Code:<input type="password" name="Six Digit Code"></p><br>
 <p>Enter Your Service Request:<input type="text" name="Service Request"></p><br>
-<p><input type="submit" value="send" name="Submit"></p>
+<p><input type="submit" value="send" name="Submit" onClick="gen_sql_table()"></p>
 </form>
 </body>
 </html>
