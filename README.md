@@ -379,12 +379,6 @@ Read
       </script>
       
    </head>
-   <body>
-      <button onclick = "read()">Read </button>
-      <button onclick = "readAll()">Read all </button>
-      <button onclick = "add()">Add data </button>
-      <button onclick = "remove()">Delete data </button>
-   </body>
 </html>
 
 <html>
