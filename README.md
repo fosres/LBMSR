@@ -128,13 +128,13 @@ function gen_sql_table()					{
 
          db.transaction(function (tx) {
             tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id unique, code INTEGER, request TEXT)');
-            tx.executeSql('INSERT INTO LOGS (id, code, request) VALUES (12345, 654321, "QR Code ripped off")');
+            tx.executeSql('INSERT INTO wasteform (id, code, request) VALUES (12345, 654321, "QR Code ripped off")');
             msg = '<p>Log message created and row inserted.</p>';
             document.querySelector('#status').innerHTML =  msg;
          })
 
          db.transaction(function (tx) {
-            tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
+            tx.executeSql('SELECT * FROM wasteform', [], function (tx, results) {
                var len = results.rows.length, i;
                msg = "<p>Found rows: " + len + "</p>";
                document.querySelector('#status').innerHTML +=  msg;
