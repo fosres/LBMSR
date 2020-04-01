@@ -266,7 +266,7 @@ function indexed_db_add() {
 <input type="button" name="button" value="Click" onClick="read_service_request(this.form)">
 </form>
 <form name="indexedb" action="" method="post">Testing IndexedDb:<br>
-<input type="button" name="button" value="IndexedDB" onClick="indexed_db_add()">
+<input type="button" name="button" value="Click" onClick="indexed_db_add()">
 </form>
 <form name="sqlform"><br>
 Enter bin number:<input type="text" name="bin" value=""><br>
