@@ -246,6 +246,11 @@ function add()	{
 		alert("Kenny has been added to your database.");
 	}
 
+	request.onerror = function(event)	{
+
+		alert("Unable to add Kenny to your database.");
+	}
+
 }
 
 </script>
