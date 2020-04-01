@@ -140,7 +140,7 @@ function gen_sql_table()					{
                document.querySelector('#status').innerHTML +=  msg;
 
                for (i = 0; i < len; i++) {
-                  msg = "<p><b>" + results.rows.item(i).log + "</b></p>";
+                  msg = "<p><b>" + results.rows.item(i).id + "</b></p>";
                   document.querySelector('#status').innerHTML +=  msg;
                }
             }, null);
@@ -361,7 +361,7 @@ Read
    </head>
 </html>
 
-Printing Entire Row
+Printing Id Field
 <!--
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://stackoverflow.com/questions/21396279/display-image-and-validation-of-image-extension-before-uploading-file-using-java
