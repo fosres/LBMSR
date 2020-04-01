@@ -233,7 +233,7 @@ function read_service_request(service_request)	{
 	
 	var request = service_request.complaint.value
 
-	alert("You typed:" + code);
+	alert("You typed:" + request;
 
 }
 
