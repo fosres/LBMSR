@@ -237,8 +237,8 @@ function read_six_digit_code(six_digit_code)	{
 <input type="button" name="button" value="Click" onClick="read_bin_number(this.form)">
 </form>
 <form name="CodeForm" action="" method="post">Enter six digit code:<br>
-<input type="password" name="code" value="">
-<input type="button" name="button" value="Click" onClick="read_bin_number(this.form)">
+<input type="password" name="code" value="Read">
+<input type="button" name="button" value="Click" onClick="read_six_digit_code(this.form)">
 </form>
 </body>
 </html>
