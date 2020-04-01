@@ -241,7 +241,7 @@ function proc_sql(form)				{
 	
 	var db = openDatabase('mydb', '1.0', 'my first database', 30000);
 	db.transaction(function (tx) {
-	  tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id unique, code INTEGER, request TEXT) (?,?,?)');
+	  tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id unique, code INTEGER, request TEXT)');
 	  tx.executeSql('INSERT INTO wasteform (id, code,request) VALUES (?,?,?)',[document.sqlform.bin.value,document.sqlform.code.value,document.sqlform.service_request.value]);
 	}
 
@@ -284,7 +284,7 @@ Enter Service Request:<input type="text" name="service_request" value=""><br>
 </body>
 </html>
 
-Faith
+Third Attempt
 
 
 <!--
