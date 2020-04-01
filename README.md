@@ -349,6 +349,14 @@ Read
    </body>
 </html>
 
+<html>
+<script>
+if (!('indexedDB' in window)) {
+  console.log('This browser doesn\'t support IndexedDB');
+  return;
+}
+</script>
+</html>
 <!--
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://stackoverflow.com/questions/21396279/display-image-and-validation-of-image-extension-before-uploading-file-using-java
