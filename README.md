@@ -28,7 +28,7 @@ To submit a service request, follow the instructions below:
 <form>
   <label for="lname">Type your issue with your trash bin below:</label><br>
   <input type="text" id="lname" name="lname" value="QR Code ripped off."><br><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" onClick="return gen_sql_table()">
 </form> 
 
 <h2>(Optional): Upload Image of Trash Bin</h2>
@@ -111,8 +111,6 @@ function gen_sql_table()					{
 </form>
 </body>
 </html>
-</form>
-</body>
 
 </html>
 
