@@ -235,18 +235,7 @@ function read_service_request(service_request)	{
 }
 
 function indexed_db_add() {
-   var request = db.transaction(["employee"], "readwrite")
-   .objectStore("employee")
-   .add({ id: "01", name: "prasad", age: 24, email: "prasad@tutorialspoint.com" });
-   
-   request.onsuccess = function(event) {
-      alert("Prasad has been added to your database.");
-   };
-   
-   request.onerror = function(event) {
-      alert("Unable to add data\r\nPrasad is already exist in your database! ");
-   }
-
+	
 	alert("Swiss");
 }
 </script>
@@ -268,7 +257,7 @@ function indexed_db_add() {
 <form name="indexedb" action="" method="post">Testing IndexedDb:<br>
 <input type="button" name="button" value="Click" onClick="indexed_db_add()">
 </form>
-<form name="sqlform"><br>
+<form name="sqlform" action="" method="post">Testing IndexedDB<br>
 Enter bin number:<input type="text" name="bin" value=""><br>
 Enter six digit code:<input type="password" name="code" value=""><br>
 Enter Service Request:<input type="text" name="service_request" value=""><br>
