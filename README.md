@@ -34,6 +34,7 @@ To submit a service request, follow the instructions below:
 <h2>(Optional): Upload Images of Trash Bin</h2>
 <form>
 <input type="file" accept="image/*" id="file" name="image" onchange="loadFile(event)" style="display: none;">
+<input type="file" accept="image/*" id="file" name="image" onchange="loadFile(event)" style="display: none;">
 </form> 
 <p><label for="file" style="curser: pointer;">Upload Image</label></p>
 <p><img id="output" width="200" /></p>
@@ -121,16 +122,25 @@ Enter something in the box: <br>
 </html>
 
 <html>
-<p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
+<p><input type="file" accept="image/*" name="image1" id="file" onchange="loadFile1(event)" style="display: none;"></p>
+<p><input type="file" accept="image/*" name="image2" id="file" onchange="loadFile2(event)" style="display: none;"></p>
 <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
 <p><img id="output" width="200" /></p>
 
 <script>
-var loadFile = function(event)	{
+var loadFile1 = function(event)	{
 	
 	var image = document.getElementById('output');
 
 	image.src = URL.createObjectURL(event.target.files[0]);	
+
+};
+
+var loadFile2 = function(event)	{
+	
+	var image = document.getElementById('output');
+
+	image.src = URL.createObjectURL(event.target.files[1]);	
 
 };
 </script>
