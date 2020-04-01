@@ -127,7 +127,7 @@ function gen_sql_table()					{
          var msg;
 
          db.transaction(function (tx) {
-            tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id unique, code, request)');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS wasteform (id, code, request)');
             tx.executeSql('INSERT INTO wasteform (id, code, request) VALUES (12345, 654321, "QR Code ripped off")');
             msg = '<p>Log message created and row inserted.</p>';
             document.querySelector('#status').innerHTML =  msg;
@@ -360,10 +360,7 @@ Read
       
    </head>
 </html>
-
-Trying to incorporate IndexedDB
-
-Put swiss at top of indexed db add
+Trying to print literal SQL Database
 <!--
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://stackoverflow.com/questions/21396279/display-image-and-validation-of-image-extension-before-uploading-file-using-java
