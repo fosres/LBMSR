@@ -59,9 +59,9 @@ To submit a service request, follow the instructions below:
          var msg;
 
          db.transaction(function (tx) {
-            tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique,code,request)');
-            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (123456, 654321,"QR Code ripped off)');
-            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (789012, 210987, "Lid ripped off")');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id,code,request)');
+            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (123456, 654321,"QR Code ripped off")');
+            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (789012, 210987,"Lid ripped off")');
             msg = '<p>Log message created and row inserted.</p>';
             document.querySelector('#status').innerHTML =  msg;
          })
@@ -113,6 +113,6 @@ Enter something in the box: <br>
 </body>
 </html>
 
-Try
+test()
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://www.geeksforgeeks.org/form-validation-using-html-javascript/
