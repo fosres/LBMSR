@@ -80,6 +80,7 @@ To submit a service request, follow the instructions below:
          });
 
 	}
+	test();
       </script>
    </head>
 
