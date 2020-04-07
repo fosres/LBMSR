@@ -108,6 +108,7 @@ Enter something in the box: <br>
 <input TYPE="text" NAME="inputbox" VALUE=""><p>
 <input TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
 <input TYPE="button" NAME="button2" Value="Write" onClick="writeText(this.form)">
+<input TYPE="button" NAME="button3" Value="SQL" onClick="test()">
 </form>
 </body>
 </html>
