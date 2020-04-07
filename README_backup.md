@@ -54,7 +54,6 @@ To submit a service request, follow the instructions below:
    <head>
 
       <script type = "text/javascript">
-      	function test()								{
          var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
          var msg;
 
@@ -78,7 +77,6 @@ To submit a service request, follow the instructions below:
                }
             }, null);
          });
-	}
       </script>
    </head>
 
