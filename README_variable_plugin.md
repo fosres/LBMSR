@@ -74,13 +74,14 @@ function readText (form) {
 function writeText (form) {
     form.inputbox.value = "Have a nice day!"
 }
-function test()								{
+function test(form)								{
          var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
-         var bins = 123456;
+         
+	 var bins = document.testform.bin_number.value;
 
-	 var crypto = 654321;
+	 var crypto = document.testform.six_digit_code.value;
 
-         var service = "Trash Bin Missing";
+         var service = document.testform.service_request.value;
 
          db.transaction(function (tx) {
            
@@ -130,17 +131,17 @@ Enter six-digit code in the box: <br>
 Enter bin number: <br>
 <input TYPE="number" NAME="bin_number" VALUE="Ex: 123456" SIZE=50><p>
 Enter six digit code: <br>
-<input TYPE="number" NAME="six_digit_code" VALUE="" SIZE=50><p>
+<input TYPE="number" NAME="six_digit_code" VALUE="Ex: 654321" SIZE=50><p>
 Enter service request: <br>
 <input TYPE="text" NAME="service_request" VALUE="" SIZE=50><p>
-<input TYPE="button" VALUE="Upload Request" onClick="test(this.form)">
+<input TYPE="button" VALUE="Upload Request" onClick="test()">
 </form>
 </body>
 </html>
 
-test4()
+<!--
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://www.geeksforgeeks.org/form-validation-using-html-javascript/
-
+-->
 
 
