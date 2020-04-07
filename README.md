@@ -113,6 +113,6 @@ Enter something in the box: <br>
 </body>
 </html>
 
-test()
+test2()
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://www.geeksforgeeks.org/form-validation-using-html-javascript/
