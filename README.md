@@ -54,7 +54,27 @@ To submit a service request, follow the instructions below:
    <head>
 
       <script type = "text/javascript">
-      	function test()								{
+      	
+      </script>
+   </head>
+
+   <body>
+      <div id = "status" name = "status">Status Message</div>
+   </body>
+</html>
+
+<html>
+<head>
+<title>Test Input </title>
+<script LANGUAGE="JavaScript">
+function readText (form) {
+    TestVar =form.inputbox.value;
+    alert ("You typed: " + TestVar);
+}
+function writeText (form) {
+    form.inputbox.value = "Have a nice day!"
+}
+function test()								{
          var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
          var bins = 123456;
 
@@ -91,26 +111,6 @@ To submit a service request, follow the instructions below:
          });
 
 	}
-	test();
-      </script>
-   </head>
-
-   <body>
-      <div id = "status" name = "status">Status Message</div>
-   </body>
-</html>
-
-<html>
-<head>
-<title>Test Input </title>
-<script LANGUAGE="JavaScript">
-function readText (form) {
-    TestVar =form.inputbox.value;
-    alert ("You typed: " + TestVar);
-}
-function writeText (form) {
-    form.inputbox.value = "Have a nice day!"
-}
 </script>
 </head>
 <body>
@@ -127,4 +127,5 @@ Enter something in the box: <br>
 test4()
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://www.geeksforgeeks.org/form-validation-using-html-javascript/
+
 
