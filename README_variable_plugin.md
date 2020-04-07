@@ -126,6 +126,15 @@ Enter six-digit code in the box: <br>
 <input TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
 <input TYPE="button" NAME="button2" Value="SQL" onClick="test()">
 </form>
+<form NAME="testform">
+Enter bin number: <br>
+<input TYPE="number" NAME="bin_number" VALUE="Ex: 123456" SIZE=50><p>
+Enter six digit code: <br>
+<input TYPE="number" NAME="six_digit_code" VALUE="" SIZE=50><p>
+Enter service request: <br>
+<input TYPE="text" NAME="service_request" VALUE="" SIZE=50><p>
+<input TYPE="button" VALUE="Upload Request" onClick="test(this.form)">
+</form>
 </body>
 </html>
 
