@@ -116,9 +116,11 @@ function test(form)								{
 </head>
 <body>
 <form NAME="testform" ACTION="" METHOD="GET">
-Enter something in the box: <br>
+Enter bin number in the box below: <br>
 <input TYPE="number" NAME="bin_number" VALUE=""><p>
+Enter six digit code in the box below: <br>
 <input TYPE="number" NAME="six_digit_code" VALUE=""><p>
+Enter service request in the box below: <br>
 <input TYPE="text" NAME="service_request" VALUE=""><p>
 <input TYPE="button" NAME="button1" Value="SQL" onClick="test()">
 </form>
