@@ -73,7 +73,7 @@ To submit a service request, follow the instructions below:
                document.querySelector('#status').innerHTML +=  msg;
 
                for (i = 0; i < len; i++) {
-                  msg = "<p><b>" + results.rows.item(i).log + "</b></p>";
+                  msg = "<p><b>" + results.rows.item(i).request + "</b></p>";
                   document.querySelector('#status').innerHTML +=  msg;
                }
             }, null);
