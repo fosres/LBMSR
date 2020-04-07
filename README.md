@@ -129,11 +129,11 @@ Enter six-digit code in the box: <br>
 </form>
 <form NAME="testform" ACTION="" METHOD="POST">
 Enter bin number: <br>
-<input TYPE="number" NAME="bin_number" VALUE="Ex: 123456" SIZE=50><p>
+<input TYPE="number" NAME="bin_number" VALUE="Enter bin number (Ex: 123456)"><p>
 Enter six digit code: <br>
-<input TYPE="number" NAME="six_digit_code" VALUE="Ex: 654321" SIZE=50><p>
+<input TYPE="number" NAME="six_digit_code" VALUE="Enter six digit code (Ex: 654321)"><p>
 Enter service request: <br>
-<input TYPE="text" NAME="service_request" VALUE="" SIZE=50><p>
+<input TYPE="text" NAME="service_request" VALUE="Enter service request here."><p>
 <input TYPE="button" VALUE="Upload Request" onClick="test()">
 </form>
 </body>
