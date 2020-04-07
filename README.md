@@ -73,7 +73,7 @@ To submit a service request, follow the instructions below:
                document.querySelector('#status').innerHTML +=  msg;
 
                for (i = 0; i < len; i++) {
-                  msg = "<p><b>" + results.rows.item(i).request + "</b></p>";
+                  msg = "<p><b>" + results.rows.item(i).request() + "</b></p>";
                   document.querySelector('#status').innerHTML +=  msg;
                }
             }, null);
@@ -113,6 +113,6 @@ Enter something in the box: <br>
 </body>
 </html>
 
-test2()
+test3()
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://www.geeksforgeeks.org/form-validation-using-html-javascript/
