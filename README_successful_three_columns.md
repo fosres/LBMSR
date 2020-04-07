@@ -87,7 +87,6 @@ function test(form)								{
  db.transaction(function (tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique,code,request TEXT)');
     tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (?,?,?)',[bins,code,service]);
-    tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (789012, 210987,"Lid ripped off")');
     msg = '<p>Log message created and row inserted.</p>';
     document.querySelector('#status').innerHTML =  msg;
  })
