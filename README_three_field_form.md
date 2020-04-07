@@ -99,13 +99,13 @@ function test(form)								{
 
        for (i = 0; i < len; i++) {
 	  msg = "<p><b>" + results.rows.item(i).id + "</b></p>";
-	  document.querySelector('#status').innerHTML +=  "Bin Number: " + msg;
+	  document.querySelector('#status').innerHTML +=  msg;
 	  
 	  msg = "<p><b>" + results.rows.item(i).code + "</b></p>";
-	  document.querySelector('#status').innerHTML +=  "Six Digit Code: " + msg;
+	  document.querySelector('#status').innerHTML +=  msg;
 	  
 	  msg = "<p><b>" + results.rows.item(i).request + "</b></p>";
-	  document.querySelector('#status').innerHTML +=  "Service Request: " + msg;
+	  document.querySelector('#status').innerHTML +=  msg;
        }
     }, null);
  });
