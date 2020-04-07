@@ -54,33 +54,6 @@ To submit a service request, follow the instructions below:
    <head>
 
       <script type = "text/javascript">
-      	function test()								{
-         var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
-         var msg;
-
-         db.transaction(function (tx) {
-            tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique,code,request TEXT)');
-            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (123456, 654321,"QR Code ripped off")');
-            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (789012, 210987,"Lid ripped off")');
-            msg = '<p>Log message created and row inserted.</p>';
-            document.querySelector('#status').innerHTML =  msg;
-         })
-
-         db.transaction(function (tx) {
-            tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
-               var len = results.rows.length, i;
-               msg = "<p>Found rows: " + len + "</p>";
-               document.querySelector('#status').innerHTML +=  msg;
-
-               for (i = 0; i < len; i++) {
-                  msg = "<p><b>" + results.rows.item(i).request + "</b></p>";
-                  document.querySelector('#status').innerHTML +=  msg;
-               }
-            }, null);
-         });
-
-	}
-	test();
       </script>
    </head>
 
@@ -100,15 +73,48 @@ function readText (form) {
 function writeText (form) {
     form.inputbox.value = "Have a nice day!"
 }
+
+function test(form)								{
+ var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+ var msg;
+
+ var bins = document.testform.bin_number.value;
+
+ var code =document.testform.six_digit_code.value;
+
+ var service = document.testform.service_request.value;
+
+ db.transaction(function (tx) {
+    tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique,code,request TEXT)');
+    tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (?,?,?)',[bins,code,service]);
+    tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (789012, 210987,"Lid ripped off")');
+    msg = '<p>Log message created and row inserted.</p>';
+    document.querySelector('#status').innerHTML =  msg;
+ })
+
+ db.transaction(function (tx) {
+    tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
+       var len = results.rows.length, i;
+       msg = "<p>Found rows: " + len + "</p>";
+       document.querySelector('#status').innerHTML +=  msg;
+
+       for (i = 0; i < len; i++) {
+	  msg = "<p><b>" + results.rows.item(i).request + "</b></p>";
+	  document.querySelector('#status').innerHTML +=  msg;
+       }
+    }, null);
+ });
+
+}
 </script>
 </head>
 <body>
-<form NAME="myform" ACTION="" METHOD="GET">
+<form NAME="testform" ACTION="" METHOD="GET">
 Enter something in the box: <br>
-<input TYPE="text" NAME="inputbox" VALUE=""><p>
-<input TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
-<input TYPE="button" NAME="button2" Value="Write" onClick="writeText(this.form)">
-<input TYPE="button" NAME="button3" Value="SQL" onClick="test()">
+<input TYPE="number" NAME="bin_number" VALUE=""><p>
+<input TYPE="number" NAME="six_digit_code" VALUE=""><p>
+<input TYPE="text" NAME="service_request" VALUE=""><p>
+<input TYPE="button" NAME="button1" Value="SQL" onClick="test()">
 </form>
 </body>
 </html>
@@ -116,4 +122,5 @@ Enter something in the box: <br>
 test4()
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://www.geeksforgeeks.org/form-validation-using-html-javascript/
+
 

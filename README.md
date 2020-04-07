@@ -54,7 +54,6 @@ To submit a service request, follow the instructions below:
    <head>
 
       <script type = "text/javascript">
-      	
       </script>
    </head>
 
@@ -74,76 +73,54 @@ function readText (form) {
 function writeText (form) {
     form.inputbox.value = "Have a nice day!"
 }
+
 function test(form)								{
-         var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
-         
-	 var bins = document.testform.bin_number.value;
+ var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+ var msg;
 
-	 var crypto = document.testform.six_digit_code.value;
+ var bins = document.testform.bin_number.value;
 
-         var service = document.testform.service_request.value;
+ var code =document.testform.six_digit_code.value;
 
-         db.transaction(function (tx) {
-           
-            tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique,code,request TEXT)');
-            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (?,?,?)',[bins,crypto,service]);
-            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (789012, 210987,"List ripped off")');
-            msg = '<p>Log message created and row inserted.</p>';
-            document.querySelector('#status').innerHTML =  msg;
-         })
+ var service = document.testform.service_request.value;
 
-         db.transaction(function (tx) {
-            tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
-               var len = results.rows.length, i;
-               msg = "<p>Found rows: " + len + "</p>";
-               document.querySelector('#status').innerHTML +=  msg;
+ db.transaction(function (tx) {
+    tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique,code,request TEXT)');
+    tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (?,?,?)',[bins,code,service]);
+    tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (789012, 210987,"Lid ripped off")');
+    msg = '<p>Log message created and row inserted.</p>';
+    document.querySelector('#status').innerHTML =  msg;
+ })
 
-               for (i = 0; i < len; i++) {
-                  msg = "<p><b>" + results.rows.item(i).id + "</b></p>";
-                  document.querySelector('#status').innerHTML +=  msg;
-                  
-		  msg = "<p><b>" + results.rows.item(i).code + "</b></p>";
-                  document.querySelector('#status').innerHTML +=  msg;
-		  
-		  msg = "<p><b>" + results.rows.item(i).request + "</b></p>";
-                  document.querySelector('#status').innerHTML +=  msg;
-               }
-            }, null);
-         });
+ db.transaction(function (tx) {
+    tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
+       var len = results.rows.length, i;
+       msg = "<p>Found rows: " + len + "</p>";
+       document.querySelector('#status').innerHTML +=  msg;
 
-	}
+       for (i = 0; i < len; i++) {
+	  msg = "<p><b>" + results.rows.item(i).request + "</b></p>";
+	  document.querySelector('#status').innerHTML +=  msg;
+       }
+    }, null);
+ });
+
+}
 </script>
 </head>
 <body>
-<form NAME="myform" ACTION="" METHOD="GET">
-Enter bin number in the box: <br>
-<input TYPE="text" NAME="inputbox" VALUE=""><p>
-<input TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
-<input TYPE="button" NAME="button2" Value="SQL" onClick="test()">
-</form>
-</body>
-<body>
-<form NAME="myform2" ACTION="" METHOD="GET">
-Enter six-digit code in the box: <br>
-<input TYPE="text" NAME="inputbox2" VALUE=""><p>
-<input TYPE="button" NAME="button3" Value="Read" onClick="readText(this.form)">
-<input TYPE="button" NAME="button4" Value="SQL" onClick="test()">
-</form>
-</body>
-<body>
 <form NAME="testform" ACTION="" METHOD="GET">
-Enter three submission fields: <br>
-<input TYPE="number" NAME="bin_number" VALUE="Enter bin number (Ex: 123456)"><p>
-<input TYPE="number" NAME="six_digit_code" VALUE="Enter six digit code (Ex: 654321)"><p>
-<input TYPE="text" NAME="service_request" VALUE="Enter service request here."><p>
-<input TYPE="button" VALUE="Upload Request" onClick="test()">
+Enter something in the box: <br>
+<input TYPE="number" NAME="bin_number" VALUE=""><p>
+<input TYPE="number" NAME="six_digit_code" VALUE=""><p>
+<input TYPE="text" NAME="service_request" VALUE=""><p>
+<input TYPE="button" NAME="button1" Value="SQL" onClick="test()">
 </form>
 </body>
 </html>
 
-<!--
+test4()
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://www.geeksforgeeks.org/form-validation-using-html-javascript/
--->
 
 
