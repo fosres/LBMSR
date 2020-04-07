@@ -56,12 +56,17 @@ To submit a service request, follow the instructions below:
       <script type = "text/javascript">
       	function test()								{
          var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
-         var msg;
+         var bins = 123456;
+
+	 var crypto = 654321;
+
+         var service = "Trash Bin Missing";
 
          db.transaction(function (tx) {
+           
             tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique,code,request TEXT)');
-            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (123456, 654321,"QR Code ripped off")');
-            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (789012, 210987,"Lid ripped off")');
+            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (?,?,?)',[bins,crypto,service]);
+            tx.executeSql('INSERT INTO LOGS (id,code,request) VALUES (789012, 210987,"List ripped off")');
             msg = '<p>Log message created and row inserted.</p>';
             document.querySelector('#status').innerHTML =  msg;
          })
@@ -73,7 +78,13 @@ To submit a service request, follow the instructions below:
                document.querySelector('#status').innerHTML +=  msg;
 
                for (i = 0; i < len; i++) {
-                  msg = "<p><b>" + results.rows.item(i).request + "</b></p>";
+                  msg = "<p><b>" + results.rows.item(i).id + "</b></p>";
+                  document.querySelector('#status').innerHTML +=  msg;
+                  
+		  msg = "<p><b>" + results.rows.item(i).code + "</b></p>";
+                  document.querySelector('#status').innerHTML +=  msg;
+		  
+		  msg = "<p><b>" + results.rows.item(i).request + "</b></p>";
                   document.querySelector('#status').innerHTML +=  msg;
                }
             }, null);
@@ -113,7 +124,7 @@ Enter something in the box: <br>
 </body>
 </html>
 
-test5()
+test4()
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://www.geeksforgeeks.org/form-validation-using-html-javascript/
 
