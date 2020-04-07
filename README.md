@@ -115,24 +115,30 @@ function test(form)								{
 </script>
 </head>
 <body>
-<form NAME="myform" ACTION="" METHOD="POST">
+<form NAME="myform" ACTION="" METHOD="GET">
 Enter bin number in the box: <br>
 <input TYPE="text" NAME="inputbox" VALUE=""><p>
 <input TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
 <input TYPE="button" NAME="button2" Value="SQL" onClick="test()">
 </form>
-<form NAME="myform2" ACTION="" METHOD="POST">
+</body>
+<body>
+<form NAME="myform2" ACTION="" METHOD="GET">
 Enter six-digit code in the box: <br>
 <input TYPE="text" NAME="inputbox2" VALUE=""><p>
 <input TYPE="button" NAME="button3" Value="Read" onClick="readText(this.form)">
 <input TYPE="button" NAME="button4" Value="SQL" onClick="test()">
 </form>
-<form NAME="testform" ACTION="" METHOD="POST">
+</body>
+<body>
+<form NAME="testform" ACTION="" METHOD="GET">
+Enter three submission fields: <br>
 <input TYPE="number" NAME="bin_number" VALUE="Enter bin number (Ex: 123456)"><p>
 <input TYPE="number" NAME="six_digit_code" VALUE="Enter six digit code (Ex: 654321)"><p>
 <input TYPE="text" NAME="service_request" VALUE="Enter service request here."><p>
-<input TYPE="button" VALUE="Upload Request" onClick="test()">
+<input TYPE="button" VALUE="Upload Request" onClick="test(this.form)">
 </form>
+</body>
 </body>
 </html>
 
