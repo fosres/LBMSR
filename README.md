@@ -39,13 +39,13 @@ To submit a service request, follow the instructions below:
 <h2>(Optional): Upload Image of Trash Bin</h2>
 <form>
 <input type="file" accept="image/*" id="file1" name="image1" onchange="loadFile1(event)" style="display: none;">
-<p><label for="file1" style="curser: pointer;">Upload Image 1</label></p>
+<p><label for="file1" style="curser: pointer;">Upload Image</label></p>
 <p><img id="output1" width="200" /></p>
 </form> 
 
 <form>
 <input type="file" accept="image/*" id="file2" name="image2" onchange="loadFile2(event)" style="display: none;">
-<p><label for="file2" style="curser: pointer;">Upload Image 2</label></p>
+<p><label for="file2" style="curser: pointer;">Upload Image</label></p>
 <p><img id="output2" width="200" /></p>
 </form> 
 
