@@ -44,6 +44,11 @@ To submit a service request, follow the instructions below:
 <p><img id="output2" width="200" /></p>
 </form>
 
+<form action="upload.php" id="uploadbanner" enctype="multipart/form-data" method="post" action="#">
+   <input id="fileupload" name="myfile" type="file" />
+   <input type="submit" value="submit" id="submit" />
+</form>
+
 <script>
 var loadFile1 = function(event) {
 	var image = document.getElementById('output1');
@@ -146,9 +151,9 @@ Enter service request in the box below: <br>
 </body>
 </html>
 
-test4()
+<!--
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://www.geeksforgeeks.org/form-validation-using-html-javascript/
-
-
+#URL:https://stackoverflow.com/questions/5628011/how-to-upload-a-file-to-my-server-using-html
+-->
 
