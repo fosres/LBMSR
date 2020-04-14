@@ -32,9 +32,29 @@ To submit a service request, follow the instructions below:
 </form> 
 
 <h2>(Optional): Upload Images of Trash Bin</h2>
-<form action="/action_page.php">
-	<input type="file" id="myFile" name="filename">
-	<input type="submit">
+<form>
+<p><input type="file"  accept="image/*" name="image" id="file1"  onchange="loadFile1(event)" style="display: none;"></p>
+<p><label for="file1" style="cursor: pointer;">Upload Image</label></p>
+<p><img id="output1" width="200" /></p>
+</form>
+
+<form>
+<p><input type="file"  accept="image/*" name="image" id="file2"  onchange="loadFile2(event)" style="display: none;"></p>
+<p><label for="file2" style="cursor: pointer;">Upload Image</label></p>
+<p><img id="output2" width="200" /></p>
+</form>
+
+<script>
+var loadFile1 = function(event) {
+	var image = document.getElementById('output1');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+var loadFile2 = function(event) {
+	var image = document.getElementById('output2');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
 </form> 
 
 
@@ -129,5 +149,6 @@ Enter service request in the box below: <br>
 test4()
 #URL:https://www.javaworld.com/article/2077176/using-javascript-and-forms.html
 #URL:https://www.geeksforgeeks.org/form-validation-using-html-javascript/
+
 
 
