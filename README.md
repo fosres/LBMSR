@@ -172,5 +172,6 @@ Enter service request in the box below: <br>
 #URL:https://www.geeksforgeeks.org/form-validation-using-html-javascript/
 #URL:https://stackoverflow.com/questions/5628011/how-to-upload-a-file-to-my-server-using-html
 #URL:https://stackoverflow.com/Questions/5587973/javascript-upload-file
+#URL:https://stackoverflow.com/questions/43262121/trying-to-use-fetch-and-pass-in-mode-no-cors
 -->
 
